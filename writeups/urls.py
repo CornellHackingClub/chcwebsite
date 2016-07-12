@@ -15,8 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 
-from .views import lectures_home
+from .views import writeups_home
 
 urlpatterns = [
-    url(r'^$', lectures_home),
+    url(r'^$', writeups_home),
 ]

@@ -1,9 +1,8 @@
 from django.shortcuts import render
-from .models import Lectures
+from .models import Writeups
 
-# Just using function based views for now because they're easy
-def lectures_home(request):
-    queryset = Lectures.objects.all()
+def writeups_home(request):
+    queryset = Writeups.objects.all()
     if request.user.is_authenticated():
         context = {
         "object_list": queryset,
@@ -14,4 +13,4 @@ def lectures_home(request):
         "title":"bruh"
     }
 
-    return render(request, "lectures.html", context)
+    return render(request, "writeups-main.html", context)
