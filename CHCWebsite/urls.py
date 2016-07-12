@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^lectures/', include('lectures.urls')),
     url(r'^writeups/', include('writeups.urls')),
+    url(r'^guides/', include('guides.urls')),
     url(r'^$', TemplateView.as_view(template_name='index.html'), name="index"),
     url(r'^about$', TemplateView.as_view(template_name='about.html'), name="about"),
     url(r'^sponsorship$', TemplateView.as_view(template_name='sponsorship.html'), name="sponsorship"),
@@ -32,3 +33,4 @@ urlpatterns = [
 
 if settings.DEBUG == True:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
