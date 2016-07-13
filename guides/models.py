@@ -5,13 +5,12 @@ from django.conf import settings
 from django.db import models
 
 # Create your models here.
-
-class Lectures(models.Model):
+class Guides(models.Model):
     title = models.CharField(max_length=125)
     description = models.TextField()
     updated = models.DateTimeField(auto_now=True, auto_now_add=False)
     timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
-    document = models.FileField(upload_to=os.path.join(settings.BASE_DIR, '../media/lectures'), blank=False)
+    document = models.FileField(upload_to=os.path.join(settings.BASE_DIR, '../media/guides'), blank=False)
 
     def __unicode__(self):
         # This is the title of the lecture that will display in the admin page
