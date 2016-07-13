@@ -19,5 +19,5 @@ from .views import writeups_home, writeups_detail
 
 urlpatterns = [
     url(r'^$', writeups_home),
-    url(r'^(?P<name>[\w\-]+)/$', writeups_detail),
+    url(r'^(?P<id>\d+)/$', writeups_detail),
 ]

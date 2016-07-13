@@ -10,5 +10,9 @@ def writeups_home(request):
     return render(request, "writeups-main.html", context)
 
 
-def writeups_detail(request, name):
-    instance = get_object_or_404(Writeups, name=name)
+def writeups_detail(request, id):
+    instance = get_object_or_404(Writeups, id=id)
+    context = {
+        "instance": instance,
+    }
+    return render(request, "writeup.html", context)

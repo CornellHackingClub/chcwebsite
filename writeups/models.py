@@ -11,9 +11,9 @@ class Writeups(models.Model):
     place = models.IntegerField()
     out_of = models.IntegerField()
     description = models.TextField()
+    writeup = models.TextField()
     updated = models.DateTimeField(auto_now=True, auto_now_add=False)
     timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
-    # document = models.FileField(upload_to='../static/lectures', blank=True)
 
     def __unicode__(self):
         # This is the title of the lecture that will display in the admin page
