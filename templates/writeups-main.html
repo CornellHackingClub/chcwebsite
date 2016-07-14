@@ -77,7 +77,7 @@
             <p>Placed <b>{{ obj.place }}</b> out of <b>{{ obj.out_of }}</b> | Competed on {{ obj.date_competed }}</p>
             </p>
             <p>{{ obj.description }}</p>
-            <a class="btn btn-primary" href="../{{ obj.document }}">Read Writeup <i class="fa fa-angle-right"></i></a>
+            <a class="btn btn-primary" href="{% url "writeup" id=obj.id %}">Read Writeup <i class="fa fa-angle-right"></i></a>
         </div>
     </div>
     <hr>

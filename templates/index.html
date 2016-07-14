@@ -34,122 +34,136 @@
 
 <body>
 
-   <!-- Navigation -->
-   {% include "header.html" %}
+<!-- Navigation -->
+{% include "header.html" %}
 
-    <!-- Header Carousel -->
-    <header id="myCarousel" class="carousel slide">
-        <!-- Indicators -->
+<!-- Header Carousel -->
+<header id="myCarousel" class="carousel slide">
+    <!-- Indicators -->
 
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-            <div class="item active">
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide One');"></div>
-                <div class="carousel-caption">
-                    <h2>Cornell Hacking Club</h2>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide One');"></div>
+            <div class="carousel-caption">
+                <h2>Cornell Hacking Club</h2>
+            </div>
+        </div>
+    </div>
+
+
+</header>
+
+<!-- Page Content -->
+<div class="container">
+
+    <!-- Marketing Icons Section -->
+    <div class="row padding-top">
+        <!--<div class="col-lg-12">-->
+        <!--<h1 class="page-header">-->
+        <!--Optional Header, Undecided if Necessary-->
+        <!--</h1>-->
+        <!--</div>-->
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4><i class="fa fa-fw fa-floppy-o"></i> About Us</h4>
+                </div>
+                <div class="panel-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla
+                        aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus
+                        eveniet incidunt dicta nostrum quod?</p>
+                    <a href="about.html" class="btn btn-default">Learn More</a>
                 </div>
             </div>
         </div>
-
-
-    </header>
-
-    <!-- Page Content -->
-    <div class="container">
-
-        <!-- Marketing Icons Section -->
-        <div class="row padding-top">
-            <!--<div class="col-lg-12">-->
-                <!--<h1 class="page-header">-->
-                    <!--Optional Header, Undecided if Necessary-->
-                <!--</h1>-->
-            <!--</div>-->
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-floppy-o"></i> About Us</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                        <a href="about.html" class="btn btn-default">Learn More</a>
-                    </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4><i class="fa fa-fw fa-calendar"></i> Get Involved</h4>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-calendar"></i> Get Involved</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                        <a href="#" class="btn btn-default">Learn More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-money"></i> Sponsorship</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                        <a href="sponsorship.html" class="btn btn-default">Learn More</a>
-                    </div>
+                <div class="panel-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla
+                        aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus
+                        eveniet incidunt dicta nostrum quod?</p>
+                    <a href="#" class="btn btn-default">Learn More</a>
                 </div>
             </div>
         </div>
-        <!-- /.row -->
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4><i class="fa fa-fw fa-money"></i> Sponsorship</h4>
+                </div>
+                <div class="panel-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla
+                        aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus
+                        eveniet incidunt dicta nostrum quod?</p>
+                    <a href="sponsorship.html" class="btn btn-default">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
 
-        <!-- Portfolio Section -->
+    <!-- Portfolio Section -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                Event Calendar
+            </h1>
+        </div>
+        <div class="container padding-bottom">
+            <hr>
+            <div id="calendar"></div>
+        </div>
+    </div>
+    <!-- /.row -->
+    <p>{{ events }}</p>
+
+
+    <!-- Call to Action Section -->
+    <div class="well">
+        <div class="row">
+            <div class="col-md-8">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum
+                    deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
+            </div>
+            <div class="col-md-4">
+                <a class="btn btn-lg btn-default btn-block" href="#">Call to Action</a>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">
-                    Event Calendar
-                </h1>
-            </div>
-            <div class="container padding-bottom">
-                <hr>
-                <div id="calendar"></div>
+                <p>Copyright &copy; Cornell Hacking Club 2016</p>
             </div>
         </div>
-        <!-- /.row -->
+    </footer>
 
+</div>
+<!-- /.container -->
 
-        <!-- Call to Action Section -->
-        <div class="well">
-            <div class="row">
-                <div class="col-md-8">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
-                </div>
-                <div class="col-md-4">
-                    <a class="btn btn-lg btn-default btn-block" href="#">Call to Action</a>
-                </div>
-            </div>
-        </div>
+<!-- jQuery -->
+<script src="../static/js/jquery.js"></script>
 
-        <hr>
+<!-- Bootstrap Core JavaScript -->
+<script src="../static/js/bootstrap.min.js"></script>
 
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Cornell Hacking Club 2016</p>
-                </div>
-            </div>
-        </footer>
+<!-- Script for Calendar -->
+{#<script src="../static/js/calendar.js"></script>#}
 
-    </div>
-    <!-- /.container -->
-
-    <!-- jQuery -->
-    <script src="../static/js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../static/js/bootstrap.min.js"></script>
-
-    <!-- Script for Calendar -->
-    <script src="../static/js/calendar.js"></script>
-
+<script>
+    events = (JSON.parse('{{ events }}'.replace(/&quot;/g, '\"')))
+    $.getScript('http://arshaw.com/js/fullcalendar-1.6.4/fullcalendar/fullcalendar.min.js', function () {
+        $('#calendar').fullCalendar(events);
+    })
+</script>
 
 </body>
 

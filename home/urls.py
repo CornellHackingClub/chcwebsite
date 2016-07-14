@@ -15,9 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 
-from .views import writeups_home, writeups_detail
+from .views import calendar
 
 urlpatterns = [
-    url(r'^$', writeups_home),
-    url(r'^(?P<id>\d+)/$', writeups_detail, name='writeup'),
+    url(r'^$', calendar),
 ]
