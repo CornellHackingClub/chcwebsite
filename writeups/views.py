@@ -5,7 +5,7 @@ from .models import Writeups
 def writeups_home(request):
     queryset = Writeups.objects.all()
     context = {
-        "object_list": queryset,
+        "ctfs": queryset,
     }
     return render(request, "writeups-main.html", context)
 
@@ -13,6 +13,6 @@ def writeups_home(request):
 def writeups_detail(request, id):
     instance = get_object_or_404(Writeups, id=id)
     context = {
-        "instance": instance,
+        "writeup": instance,
     }
     return render(request, "writeup.html", context)

@@ -25,7 +25,7 @@ def build_events_json():
                     "title": data.title,
                     "start": data.start.strftime(settings.DATE_INPUT_FORMATS),
                     "end": data.end.strftime(settings.DATE_INPUT_FORMATS),
-                    "allDay": False
+                    "allDay": data.allday
                 }
         events.append(event)
     result = {"header": header,

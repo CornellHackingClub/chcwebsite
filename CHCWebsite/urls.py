@@ -29,6 +29,7 @@ urlpatterns = [
     url(r'^sponsorship$', TemplateView.as_view(template_name='sponsorship.html'), name="sponsorship"),
     url(r'^contact$', TemplateView.as_view(template_name='contact.html'), name="contact"),
     url(r'^faq$', TemplateView.as_view(template_name='faq.html'), name="faq"),
+    url(r'^tools$', TemplateView.as_view(template_name='tools.html'), name="tools"),
 ]
 
 admin.site.site_header = 'Cornell Hacking Club Admin Page'

@@ -5,6 +5,6 @@ from .models import Lectures
 def lectures_home(request):
     queryset = Lectures.objects.all()
     context = {
-        "object_list": queryset,
+        "lectures": queryset,
     }
     return render(request, "lectures.html", context)

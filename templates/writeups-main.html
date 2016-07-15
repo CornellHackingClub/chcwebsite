@@ -68,16 +68,16 @@
         <!--</div>-->
 
     <!--</div>-->
-     {% for obj in object_list %}
+     {% for ctf in ctfs %}
      <div class="row">
         <div class="col-md-12">
             <h3>
-                <a href="{{ obj.url_of_CTF }}">{{ obj.name_of_CTF }}</a>
+                <a href="{{ ctf.url_of_CTF }}">{{ ctf.name_of_CTF }}</a>
             </h3>
-            <p>Placed <b>{{ obj.place }}</b> out of <b>{{ obj.out_of }}</b> | Competed on {{ obj.date_competed }}</p>
+            <p>Placed <b>{{ ctf.place }}</b> out of <b>{{ ctf.out_of }}</b> | Competed on {{ ctf.date_competed }}</p>
             </p>
-            <p>{{ obj.description }}</p>
-            <a class="btn btn-primary" href="{% url "writeup" id=obj.id %}">Read Writeup <i class="fa fa-angle-right"></i></a>
+            <p>{{ ctf.description }}</p>
+            <a class="btn btn-primary" href="{% url "writeup" id=ctf.id %}">Read Writeup <i class="fa fa-angle-right"></i></a>
         </div>
     </div>
     <hr>

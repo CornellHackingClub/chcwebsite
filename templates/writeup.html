@@ -63,12 +63,12 @@
             <hr>
 
             <!-- Blog Post -->
-            <h1>{{ instance.name_of_CTF }}</h1>
+            <h1>{{ writeup.name_of_CTF }}</h1>
 
             <hr>
 
             <!-- Date/Time -->
-            <p><i class="fa fa-clock-o"></i> Competed on {{ instance.date_competed }}</p>
+            <p><i class="fa fa-clock-o"></i> Competed on {{ writeup.date_competed }}</p>
 
             <!--<hr>-->
 
@@ -78,7 +78,7 @@
             <hr>
 
             <!-- Post Content -->
-            {{ instance.writeup | safe }}
+            {{ writeup.writeup | safe }}
             <!-- /.row -->
 
             <hr>

@@ -5,7 +5,7 @@ from .models import Guides
 def guides_home(request):
     queryset = Guides.objects.all()
     context = {
-        "object_list": queryset,
+        "guides": queryset,
     }
 
     return render(request, "guides.html", context)
