@@ -119,8 +119,6 @@
         </div>
     </div>
     <!-- /.row -->
-    <p>{{ events }}</p>
-
 
     <!-- Call to Action Section -->
     <div class="well">
@@ -156,8 +154,6 @@
 <script src="../static/js/bootstrap.min.js"></script>
 
 <!-- Script for Calendar -->
-{#<script src="../static/js/calendar.js"></script>#}
-
 <script>
     events = (JSON.parse('{{ events }}'.replace(/&quot;/g, '\"')))
     $.getScript('http://arshaw.com/js/fullcalendar-1.6.4/fullcalendar/fullcalendar.min.js', function () {
