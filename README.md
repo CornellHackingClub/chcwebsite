@@ -1,1 +1,1 @@
-# CHCWebsite
+# Cornell Hacking Club Website
