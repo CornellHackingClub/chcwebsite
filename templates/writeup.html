@@ -41,7 +41,7 @@
     <!-- Page Heading/Breadcrumbs -->
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Writeup Title
+            <h1 class="page-header">{{ writeup.name_of_CTF }}
                 </small>
             </h1>
             <ol class="breadcrumb">
@@ -60,28 +60,8 @@
         <!-- Blog Post Content Column -->
         <div class="col-lg-12">
 
-            <hr>
-
-            <!-- Blog Post -->
-            <h1>{{ writeup.name_of_CTF }}</h1>
-
-            <hr>
-
-            <!-- Date/Time -->
-            <p><i class="fa fa-clock-o"></i> Competed on {{ writeup.date_competed }}</p>
-
-            <!--<hr>-->
-
-            <!--&lt;!&ndash; Preview Image &ndash;&gt;-->
-            <!--<img class="img-responsive" src="http://placehold.it/900x300" alt="">-->
-
-            <hr>
-
-            <!-- Post Content -->
+            <!-- Writeup Content -->
             {{ writeup.writeup | safe }}
-            <!-- /.row -->
-
-            <hr>
 
             <!-- Footer -->
             <footer>

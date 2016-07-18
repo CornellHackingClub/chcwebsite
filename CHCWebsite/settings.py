@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'home',
     'lectures',
     'writeups',
-    'guides'
+    'guides',
+    'contact'
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -133,3 +134,12 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static")
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media")
+
+# email settings, currently configured to send an email to Evan K
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'esk79@cornell.edu'
+EMAIL_HOST_PASSWORD = ''
+DEFAULT_FROM_EMAIL = 'esk79@cornell.edu'
+DEFAULT_TO_EMAIL = 'esk79@cornell.edu'
