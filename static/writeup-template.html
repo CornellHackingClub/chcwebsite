@@ -22,15 +22,15 @@
 
 <pre class="prettyprint">
             <code class="language-python">
-                client = TwilioRestClient(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
+    client = TwilioRestClient(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
 
-                client.messages.create(
-                to=number_of_boss,
-                from_=my_number,
-                body="Gonna work from home. " + random.choice(excuses)
-                )
+    client.messages.create(
+    to=number_of_boss,
+    from_=my_number,
+    body="Gonna work from home. " + random.choice(excuses)
+    )
 
-                print "Message sent at " + strftime("%a, %d %b %Y %H:%M:%S")
+    print "Message sent at " + strftime("%a, %d %b %Y %H:%M:%S")
             </code>
         </pre>
 
@@ -84,10 +84,10 @@
 
         <pre class="prettyprint">
             <code class="language-python">
-                parents, babies = (1, 1)
-                while babies < 100:
-                print 'This generation has {0} babies'.format(babies)
-                parents, babies = (babies, parents + babies)
+    parents, babies = (1, 1)
+    while babies < 100:
+    print 'This generation has {0} babies'.format(babies)
+    parents, babies = (babies, parents + babies)
             </code>
         </pre>
 
