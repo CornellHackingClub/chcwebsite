@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from flask import json
+import json
 
 from CHCWebsite import settings
 from .models import Home
