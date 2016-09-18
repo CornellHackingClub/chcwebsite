@@ -28,7 +28,7 @@ urlpatterns = [
     # url(r'^contact/', include('contact.urls')),
     url(r'^about$', TemplateView.as_view(template_name='about.html'), name="about"),
     # url(r'^sponsorship$', TemplateView.as_view(template_name='sponsorship.html'), name="sponsorship"),
-    url(r'^faq$', TemplateView.as_view(template_name='faq.html'), name="faq"),
+    url(r'^faq/', include('faq.urls')),
     url(r'^tools$', TemplateView.as_view(template_name='tools.html'), name="tools"),
 ]
 
