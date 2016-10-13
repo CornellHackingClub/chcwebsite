@@ -4,6 +4,7 @@
 
 <!-- Navigation -->
 {% include "header.html" %}
+{% load static %}
 
 <!-- Header Carousel -->
 <header id="myCarousel" class="carousel slide">
@@ -12,7 +13,7 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
         <div class="item active">
-            <div class="fill" style="background-image:url('../static/img/websitebanner_black-01.jpg');"></div>
+            <div class="fill" style="background-image:url('{% static "img/websitebanner.jpg" %}');"></div>
         </div>
     </div>
 
@@ -106,11 +107,7 @@
 </div>
 <!-- /.container -->
 
-<!-- jQuery -->
-<script src="../static/js/jquery.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="../static/js/bootstrap.min.js"></script>
+{% include "js.html" %}
 
 <!-- Script for Calendar -->
 <script>

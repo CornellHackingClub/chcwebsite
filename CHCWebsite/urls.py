@@ -23,7 +23,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('home.urls')),
     url(r'^lectures/', include('lectures.urls')),
-    url(r'^writeups/', include('writeups.urls')),
+    url(r'^writeups/', include('writeups.urls'), name="test"),
     url(r'^guides/', include('guides.urls')),
     # url(r'^contact/', include('contact.urls')),
     url(r'^about$', TemplateView.as_view(template_name='about.html'), name="about"),

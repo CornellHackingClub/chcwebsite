@@ -15,8 +15,6 @@ def faq_home(request):
 
     error = None
 
-    print user
-
     if str(user) != 'admin':
         queryset = queryset.filter(Q(user__exact=str(user)) | Q(user__exact='admin'))
 
@@ -25,6 +23,6 @@ def faq_home(request):
         "username": user,
         "error": error
     }
+
     response = render(request, "faq.html", context)
-    response['X-XSS-Protection'] = 0
     return response
