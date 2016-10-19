@@ -7,9 +7,9 @@ from .models import Home
 
 # Just using function based views for now because they're easy
 def calendar(request):
-    events_json = build_events_json()
+    queryset = Home.objects.all()
     context = {
-        "events": events_json,
+        "events": queryset,
     }
     return render(request, "index.html", context)
 

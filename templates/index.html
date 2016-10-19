@@ -86,10 +86,23 @@
                 Event Calendar
             </h1>
         </div>
-        <div class="container padding-bottom">
-            <hr>
-            <div id="calendar"></div>
-        </div>
+        <table class="table table-striped">
+            <thead style="background: #5C0005; ">
+            <tr>
+                <th>What?</th>
+                <th>When?</th>
+                <th>Where?</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for event in events %}
+                <tr>
+                    <th scope="row">{{ event.title }}</th>
+                    <td>{{ event.start }}</td>
+                    <td>Thurston 205</td>
+                </tr>
+            {% endfor %}
+        </table>
     </div>
     <!-- /.row -->
 
@@ -111,10 +124,10 @@
 
 <!-- Script for Calendar -->
 <script>
-    events = (JSON.parse('{{ events }}'.replace(/&quot;/g, '\"')))
-    $.getScript('http://arshaw.com/js/fullcalendar-1.6.4/fullcalendar/fullcalendar.min.js', function () {
-        $('#calendar').fullCalendar(events);
-    })
+    {#    events = (JSON.parse('{{ events }}'.replace(/&quot;/g, '\"')))#}
+    {#    $.getScript('http://arshaw.com/js/fullcalendar-1.6.4/fullcalendar/fullcalendar.min.js', function () {#}
+    {#        $('#calendar').fullCalendar(events);#}
+    {#    })#}
 </script>
 
 </body>
