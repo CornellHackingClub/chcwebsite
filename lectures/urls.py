@@ -18,5 +18,5 @@ from django.conf.urls import url, include
 from .views import lectures_home
 
 urlpatterns = [
-    url(r'^$', lectures_home),
+    url(r'^$', lectures_home, name="lectures"),
 ]

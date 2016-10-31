@@ -7,7 +7,7 @@ from .models import Home
 
 # Just using function based views for now because they're easy
 def calendar(request):
-    queryset = Home.objects.all()
+    queryset = Home.objects.all().order_by('start').reverse()
     context = {
         "events": queryset,
     }

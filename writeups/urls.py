@@ -18,6 +18,6 @@ from django.conf.urls import url, include
 from .views import writeups_home, writeups_detail
 
 urlpatterns = [
-    url(r'^$', writeups_home),
-    url(r'^(?P<id>\d+)/$', writeups_detail, name='writeup'),
+    url(r'^$', writeups_home,name='writeups'),
+    url(r'^(?P<id>\d+)/$', writeups_detail, name="writeup"),
 ]

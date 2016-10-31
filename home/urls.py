@@ -18,5 +18,5 @@ from django.conf.urls import url, include
 from .views import calendar
 
 urlpatterns = [
-    url(r'^$', calendar),
+    url(r'^$', calendar, name="home"),
 ]

@@ -14,9 +14,9 @@
                 </small>
             </h1>
             <ol class="breadcrumb">
-                <li><a href="../../">Home</a>
+                <li><a href="{% url 'home' %}">Home</a>
                 </li>
-                <li><a href="../">Writeups</a></li>
+                <li><a href="{% url 'writeups' %}">Writeups</a></li>
                 <li class="active">{{ writeup.name_of_CTF }}</li>
             </ol>
         </div>
