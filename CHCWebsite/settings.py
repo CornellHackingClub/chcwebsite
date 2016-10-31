@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'jitdu3lmibz-)!bl_dpeg7ame8fu$4=*)omsse^nz%e+(ibmj*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -127,7 +127,7 @@ USE_TZ = True
 DATE_INPUT_FORMATS = '%Y-%m-%dT%H:%M:%S.000Z'
 
 
-STATIC_URL = '/static/'
+STATIC_URL = 'http://74.79.9.195:8000/'
 MEDIA_URL = '/media/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
