@@ -127,13 +127,13 @@ USE_TZ = True
 DATE_INPUT_FORMATS = '%Y-%m-%dT%H:%M:%S.000Z'
 
 
-STATIC_URL = '/home/l0g1c/Documents/CHC/Website/CornellHackingClubWebsite-Static/static/'
+STATIC_ROOT = '/home/l0g1c/Documents/CHC/Website/CornellHackingClubWebsite-Static/static/'
 MEDIA_URL = '/media/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
 
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static")
+# STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static")
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media")
 
 # email settings, currently configured to send an email to Evan K
