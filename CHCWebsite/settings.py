@@ -127,7 +127,7 @@ USE_TZ = True
 DATE_INPUT_FORMATS = '%Y-%m-%dT%H:%M:%S.000Z'
 
 
-STATIC_URL = 'http://50.159.66.236:1000/'
+STATIC_URL = '/home/l0g1c/Documents/CHC/Website/CornellHackingClubWebsite-Static/static/'
 MEDIA_URL = '/media/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
