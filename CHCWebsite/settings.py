@@ -127,7 +127,7 @@ USE_TZ = True
 DATE_INPUT_FORMATS = '%Y-%m-%dT%H:%M:%S.000Z'
 
 
-STATIC_URL = 'http://74.79.9.195:8000/'
+STATIC_URL = 'http://localhost:1000/'
 MEDIA_URL = '/media/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
