@@ -127,7 +127,7 @@ USE_TZ = True
 DATE_INPUT_FORMATS = '%Y-%m-%dT%H:%M:%S.000Z'
 
 
-STATIC_ROOT = '/home/l0g1c/Documents/CHC/Website/CornellHackingClubWebsite-Static/static/'
+STATIC_ROOT = '/static/'
 MEDIA_URL = '/media/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
@@ -136,11 +136,3 @@ STATICFILES_DIRS = [
 # STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static")
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media")
 
-# email settings, currently configured to send an email to Evan K
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'esk79@cornell.edu'
-EMAIL_HOST_PASSWORD = ''
-DEFAULT_FROM_EMAIL = 'esk79@cornell.edu'
-DEFAULT_TO_EMAIL = 'esk79@cornell.edu'
