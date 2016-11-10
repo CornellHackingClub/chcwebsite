@@ -1,6 +1,6 @@
 {% include "head.html" %}
 {% load static %}
-<body>
+<body xmlns="http://www.w3.org/1999/html">
 
 <!-- Navigation -->
 {% include "header.html" %}
@@ -11,8 +11,8 @@
     <!-- Page Heading/Breadcrumbs -->
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Challenge Completion Form!
-                <small></small>
+            <h1 class="page-header">Challenge Completion Form!</br>
+                <small>Congratulations! Please fill out the provided form and we will be in touch shortly to schedule an interview.</small>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="{% url 'home' %}">Home</a>
@@ -26,6 +26,11 @@
 
     <form>
         <div class="container-fluid">
+            {% if error %}
+                <div class="alert alert-danger">
+                    <strong>Oops!</strong> {{ error }}
+                </div>
+            {% endif %}
             <div class="form-group">
                 <label for="exampleInputEmail1">Name</label>
                 <input type="name" class="form-control" name="name">
@@ -35,26 +40,26 @@
                 <input class="form-control" name="netid">
             </div>
             <fieldset class="form-group">
-                    <label class="radio-inline">
-                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1"
-                               value="option1">
-                        Freshman
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2"
-                               value="option2">
-                        Sophomore
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3"
-                               value="option3">
-                        Junior
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3"
-                               value="option3">
-                        Senior
-                    </label>
+                <label class="radio-inline">
+                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1"
+                           value="freshman">
+                    Freshman
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2"
+                           value="sophmore">
+                    Sophomore
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3"
+                           value="junior">
+                    Junior
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" class="form-check-input" name="year" id="optionsRadios3"
+                           value="senior">
+                    Senior
+                </label>
             </fieldset>
             <button type="submit" class="btn btn-primary">Submit</button>
         </div>

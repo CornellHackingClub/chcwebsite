@@ -1,10 +1,9 @@
 from __future__ import unicode_literals
 
+import django.utils
 from django.db import models
 
 # Create your models here.
-
-
 class Home(models.Model):
     title = models.CharField(max_length=125)
     start = models.DateTimeField(blank=False)
@@ -14,3 +13,15 @@ class Home(models.Model):
     def __unicode__(self):
         # This is the title of the lecture that will display in the admin page
         return self.title
+
+class Form(models.Model):
+    name = models.CharField(max_length=125)
+    netid = models.CharField(max_length=125)
+    year = models.CharField(max_length=125)
+    challenge = models.CharField(max_length=125)
+    time = models.DateTimeField(default=django.utils.timezone.now, blank=True)
+
+
+    def __unicode__(self):
+        # This is the title of the lecture that will display in the admin page
+        return self.name

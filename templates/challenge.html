@@ -50,7 +50,8 @@
                             Binary</a></p>
                 </div>
                 <div class="caption">
-                    <form METHOD="GET" action="">
+                    <form METHOD="POST" action="">
+                        {% csrf_token %}
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Flag" name="web_flag">
                           <span class="input-group-btn">
@@ -70,7 +71,8 @@
                         <a href="#" class="btn btn-default" role="button">Resources</a></p>
                 </div>
                 <div class="caption">
-                    <form METHOD="GET" action="">
+                    <form METHOD="POST" action="">
+                        {% csrf_token %}
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Flag" name="crypto_flag">
                           <span class="input-group-btn">
@@ -92,7 +94,8 @@
                            class="btn btn-default" role="button">Resources</a></p>
                 </div>
                 <div class="caption">
-                    <form METHOD="GET" action="">
+                    <form METHOD="POST" action="">
+                        {% csrf_token %}
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Flag" name="forensic_flag">
                           <span class="input-group-btn">
@@ -112,7 +115,8 @@
                         <a href="#" class="btn btn-default" role="button">Resources</a></p>
                 </div>
                 <div class="caption">
-                    <form METHOD="GET" action="">
+                    <form METHOD="POST" action="">
+                        {% csrf_token %}
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Flag" name="reverse_flag">
                           <span class="input-group-btn">

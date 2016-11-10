@@ -15,11 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 
-from .views import calendar, challenges, form
+from .views import calendar, challenges
 
 urlpatterns = [
     url(r'^$', calendar, name="home"),
     url(r'^challenge$', challenges, name="challenges"),  # this is temporary until we create view
-    url(r'^form', form, name="challenges"),  # this is temporary until we create view
-
 ]
