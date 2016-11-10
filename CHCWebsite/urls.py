@@ -30,7 +30,6 @@ urlpatterns = [
     # url(r'^sponsorship$', TemplateView.as_view(template_name='sponsorship.html'), name="sponsorship"),
     url(r'^faq/', include('faq.urls')),
     url(r'^tools$', TemplateView.as_view(template_name='tools.html'), name="tools"),
-    url(r'^challenge$', TemplateView.as_view(template_name='challenge.html'), name="challenges"), #this is temporary until we create view
 
 ]
 
