@@ -75,9 +75,9 @@ def challenges(request):
 
 
 def form(request, challenge):
-    name = request.GET.get("name")
-    netid = request.GET.get("netid")
-    year = request.GET.get("year")
+    name = request.POST.get("name")
+    netid = request.POST.get("netid")
+    year = request.POST.get("year")
     error = None
     if name and netid and year:
         query = Form(name = name , netid = netid, year = year, challenge = challenge)
