@@ -34,6 +34,11 @@
                     <strong>Oops!</strong> {{ error }}
                 </div>
             {% endif %}
+            {% if thanks %}
+                <div class="alert alert-success">
+                    <strong>Nice!</strong> {{ thanks }}
+                </div>
+            {% endif %}
             <div class="form-group">
                 <label for="exampleInputEmail1">Name</label>
                 <input type="name" class="form-control" name="name">
@@ -59,7 +64,7 @@
                     Junior
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" class="form-check-input" name="year" id="optionsRadios3"
+                    <input type="radio" class="form-check-input" name="year" id="optionsRadios4"
                            value="senior">
                     Senior
                 </label>
