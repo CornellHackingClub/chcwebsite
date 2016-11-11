@@ -1,6 +1,5 @@
 import os
 
-from django.http import HttpResponse
 from django.shortcuts import render
 import json
 
@@ -53,7 +52,6 @@ def challenges(request):
     error_text = "Sorry, not quite."
 
     if web_flag:
-        print "got web flag" + web_flag
         if web_flag == os.getenv('WEB_FLAG', 0):
             response = render(request, "completion_form.html")
             response.set_cookie('web_flag', web_flag)
@@ -62,7 +60,6 @@ def challenges(request):
             error = error_text
 
     if crypto_flag:
-        print "got crypto flag" + crypto_flag
         if crypto_flag == os.getenv('CRYPTO_FLAG', 0):
             response = render(request, "completion_form.html")
             response.set_cookie('crypto_flag', crypto_flag)
@@ -71,7 +68,6 @@ def challenges(request):
             error = error_text
 
     if forensic_flag:
-        print "got forensic flag" + forensic_flag
         if forensic_flag == os.getenv('FORENSIC_FLAG', 0) or True:
             response = render(request, "completion_form.html")
             response.set_cookie('forensic_flag', forensic_flag)
@@ -80,7 +76,6 @@ def challenges(request):
             error = error_text
 
     if reverse_flag:
-        print "got reverse flag" + reverse_flag
         if reverse_flag == os.getenv('REVERSE_FLAG', 0):
             response = render(request, "completion_form.html")
             response.set_cookie('reverse_flag', reverse_flag)
@@ -102,10 +97,6 @@ def completed_challenge(request, name, netid, year):
 
     error = None
     thanks = None
-    print name
-    print netid
-    print year
-    print challenge
     if name and netid and year and challenge:
         query = Form(name=name, netid=netid, year=year, challenge=challenge)
         query.save()
