@@ -31,7 +31,25 @@
                 <h1 class="display-3">Want to join our CTF team?</h1>
                 <p class="lead">We are currently looking for more qualified hackers to join our team. In order to get an
                     interview, solve one of the challenges below.</p>
+                <p>
+                    <a class="btn btn-primary" data-toggle="collapse" href="#moreinfo" aria-expanded="false"
+                       aria-controls="moreinfo">
+                        What's a CTF?
+                    </a>
+                </p>
+                <div class="collapse" id="moreinfo">
+                    <div class="card card-block">
+                        Capture the Flag (CTF) is a special kind of information security (hacking)
+                        competitions. Jeopardy-style CTFs have a couple of questions (tasks) in range of categories. For
+                        example, Web, Forensic, Crypto, Binary or something else. Team can gain some points for every
+                        solved task. More points for more complicated tasks usually. Each task is vulnerable in some
+                        way. Your goal is to exploit this vulnerability and in doing so you will find the "flag." For
+                        the challenges below, the flags are of the form CHC{...}. For example, a given flag could look like CHC{1_4m_4_fl46}.
+                    </div>
+                </div>
             </div>
+
+
         </div>
 
         {% if error %}
