@@ -93,21 +93,6 @@ def challenges(request):
     }
     return render(request, "challenge.html", context)
 
-# def form(request, challenge):
-#     name = request.POST.get("name")
-#     netid = request.POST.get("netid")
-#     year = request.POST.get("year")
-#     error = None
-#     if name and netid and year:
-#         query = Form(name = name , netid = netid, year = year, challenge = challenge)
-#         query.save()
-#     elif name or netid or year:
-#         error ="Please fill out all fields."
-#     context = {
-#         "error": error,
-#     }
-#     return render(request, "completion_form.html", context)
-
 def completed_challenge(request, name, netid, year):
     web = request.COOKIES.get('web_flag', None)
     crypto = request.COOKIES.get('crypto_flag', None)
