@@ -102,6 +102,10 @@ def completed_challenge(request, name, netid, year):
 
     error = None
     thanks = None
+    print name
+    print netid
+    print year
+    print challenge
     if name and netid and year and challenge:
         query = Form(name=name, netid=netid, year=year, challenge=challenge)
         query.save()
