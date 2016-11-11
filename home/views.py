@@ -68,7 +68,7 @@ def challenges(request):
             error = error_text
 
     if forensic_flag:
-        if forensic_flag == os.getenv('FORENSIC_FLAG', 0) or True:
+        if forensic_flag == os.getenv('FORENSIC_FLAG', 0):
             response = render(request, "completion_form.html")
             response.set_cookie('forensic_flag', forensic_flag)
             return response
@@ -120,7 +120,7 @@ def check_flag(web_flag, crypto_flag, forensic_flag, reverse_flag):
             return "crypto"
 
     if forensic_flag:
-        if forensic_flag == os.getenv('FORENSIC_FLAG', 0) or True:
+        if forensic_flag == os.getenv('FORENSIC_FLAG', 0):
             return "forensics"
 
     if reverse_flag:
