@@ -128,13 +128,13 @@ DATE_INPUT_FORMATS = '%Y-%m-%dT%H:%M:%S.000Z'
 
 
 STATIC_URL = '/static/'
-MEDIA_URL = '/media/'
+MEDIA_URL = '/../media/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
-    os.path.join(BASE_DIR, "media"),
+    os.path.join(BASE_DIR, "/../media"),
 ]
 
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static")
-MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR),"CHCWebSite" , "media")
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media")
 
