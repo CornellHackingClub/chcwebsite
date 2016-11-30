@@ -32,7 +32,6 @@ urlpatterns = [
     url(r'^tools$', TemplateView.as_view(template_name='tools.html'), name="tools"),
 
 ]
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 admin.site.site_header = 'Cornell Hacking Club Admin Page'
 
