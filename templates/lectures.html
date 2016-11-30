@@ -1,4 +1,5 @@
 {% include "head.html" %}
+{% load media %}
 
 <body>
 
@@ -47,7 +48,7 @@
                                 </div>
                                 <div class="col-xs-4">
                                     <button type="submit" class="btn btn-default pull-right"
-                                            onclick="window.open('{{ lecture.document.url }}')">
+                                            href="{% media lecture.document %}">
                                         Download
                                     </button>
                                 </div>
