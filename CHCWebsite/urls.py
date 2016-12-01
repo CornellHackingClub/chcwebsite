@@ -22,7 +22,7 @@ from django.views.generic.base import TemplateView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^', include('home.urls')),
+    url(r'^', include('home.urls'), name="index"),
     url(r'^lectures/', include('lectures.urls'), name="lectures"),
     url(r'^writeups/', include('writeups.urls'), name="writeups"),
     url(r'^guides/', include('guides.urls'), name="guides"),
