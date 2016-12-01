@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 from django.views.generic.base import TemplateView
+from django.conf.urls.defaults import *
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -38,7 +39,7 @@ admin.site.site_header = 'Cornell Hacking Club Admin Page'
 if settings.DEBUG == True:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-# else:
-#     urlpatterns += patterns('',
-#             url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
-#     )
+else:
+    urlpatterns += patterns('',
+            url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
+    )
