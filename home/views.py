@@ -114,21 +114,21 @@ def check_flag(web_flag, crypto_flag, forensic_flag, reverse_flag):
     completed = ""
     if web_flag:
         if web_flag == os.getenv('WEB_FLAG', 0):
-            completed += "web"
+            completed += "web "
 
     if crypto_flag:
         if crypto_flag == os.getenv('CRYPTO_FLAG', 0):
-            completed += "crypto"
+            completed += "crypto "
 
     if forensic_flag:
         if forensic_flag == os.getenv('FORENSIC_FLAG', 0):
-            completed += "forensics"
+            completed += "forensics "
 
     if reverse_flag:
         if reverse_flag == os.getenv('REVERSE_FLAG', 0):
-            completed += "reversing"
+            completed += "reversing "
 
     if completed = "":
         completed = None
-        
+
     return completed
