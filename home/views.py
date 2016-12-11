@@ -128,7 +128,7 @@ def check_flag(web_flag, crypto_flag, forensic_flag, reverse_flag):
         if reverse_flag == os.getenv('REVERSE_FLAG', 0):
             completed += "reversing "
 
-    if completed = "":
+    if completed == "":
         completed = None
 
     return completed
