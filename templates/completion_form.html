@@ -12,8 +12,7 @@
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">Challenge Completion Form</br>
-                <small>Congratulations! Please fill out the provided form and we will be in touch shortly to schedule an
-                    interview.
+                <small>Congratulations! The challenge has closed, but great job on finding the flag.
                 </small>
             </h1>
             <ol class="breadcrumb">
@@ -26,57 +25,57 @@
     </div>
     <!-- /.row -->
 
-    <form METHOD="POST" action="">
-        {% csrf_token %}
-        <div class="container-fluid">
-            {% if error %}
-                <div class="alert alert-danger">
-                    <strong>Oops!</strong> {{ error }}
-                </div>
-            {% endif %}
-            {% if thanks %}
-                <div class="alert alert-success">
-                    <strong>Nice!</strong> {{ thanks }}
-                </div>
-            {% endif %}
-            <div class="form-group">
-                <label for="exampleInputEmail1">Name</label>
-                <input type="name" class="form-control" name="name">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">NetID</label>
-                <input class="form-control" name="netid">
-            </div>
-            <fieldset class="form-group">
-                <label class="radio-inline">
-                    <input type="radio" class="form-check-input" name="year" id="optionsRadios1"
-                           value="freshman">
-                    Freshman
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" class="form-check-input" name="year" id="optionsRadios2"
-                           value="sophmore">
-                    Sophomore
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" class="form-check-input" name="year" id="optionsRadios3"
-                           value="junior">
-                    Junior
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" class="form-check-input" name="year" id="optionsRadios4"
-                           value="senior">
-                    Senior
-                </label>
-                  <label class="radio-inline">
-                    <input type="radio" class="form-check-input" name="year" id="optionsRadios5"
-                           value="grad">
-                    Post-Grad
-                </label>
-            </fieldset>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
-    </form>
+{#    <form METHOD="POST" action="">#}
+{#        {% csrf_token %}#}
+{#        <div class="container-fluid">#}
+{#            {% if error %}#}
+{#                <div class="alert alert-danger">#}
+{#                    <strong>Oops!</strong> {{ error }}#}
+{#                </div>#}
+{#            {% endif %}#}
+{#            {% if thanks %}#}
+{#                <div class="alert alert-success">#}
+{#                    <strong>Nice!</strong> {{ thanks }}#}
+{#                </div>#}
+{#            {% endif %}#}
+{#            <div class="form-group">#}
+{#                <label for="exampleInputEmail1">Name</label>#}
+{#                <input type="name" class="form-control" name="name">#}
+{#            </div>#}
+{#            <div class="form-group">#}
+{#                <label for="exampleInputPassword1">NetID</label>#}
+{#                <input class="form-control" name="netid">#}
+{#            </div>#}
+{#            <fieldset class="form-group">#}
+{#                <label class="radio-inline">#}
+{#                    <input type="radio" class="form-check-input" name="year" id="optionsRadios1"#}
+{#                           value="freshman">#}
+{#                    Freshman#}
+{#                </label>#}
+{#                <label class="radio-inline">#}
+{#                    <input type="radio" class="form-check-input" name="year" id="optionsRadios2"#}
+{#                           value="sophmore">#}
+{#                    Sophomore#}
+{#                </label>#}
+{#                <label class="radio-inline">#}
+{#                    <input type="radio" class="form-check-input" name="year" id="optionsRadios3"#}
+{#                           value="junior">#}
+{#                    Junior#}
+{#                </label>#}
+{#                <label class="radio-inline">#}
+{#                    <input type="radio" class="form-check-input" name="year" id="optionsRadios4"#}
+{#                           value="senior">#}
+{#                    Senior#}
+{#                </label>#}
+{#                  <label class="radio-inline">#}
+{#                    <input type="radio" class="form-check-input" name="year" id="optionsRadios5"#}
+{#                           value="grad">#}
+{#                    Post-Grad#}
+{#                </label>#}
+{#            </fieldset>#}
+{#            <button type="submit" class="btn btn-primary">Submit</button>#}
+{#        </div>#}
+{#    </form>#}
 
 </div>
 <!-- /.container -->
