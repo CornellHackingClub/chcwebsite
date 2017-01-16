@@ -29,8 +29,8 @@
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
                 <h1 class="display-3">Want to join our CTF team?</h1>
-                <p class="lead">We are currently looking for more qualified hackers to join our team. In order to get an
-                    interview, solve one of the challenges below. The challenges will close Jan. 15th at midnight EST.</p>
+                <p class="lead">The deadline to complete the challenges has officially passed. We will leave the
+                    challenges up for educational purposes. You can find the solutions on our <a href="{% url 'writeups' %}">write-ups page</a></p>
                 <p>
                     <a class="btn btn-primary" data-toggle="collapse" href="#moreinfo" aria-expanded="false"
                        aria-controls="moreinfo">
@@ -44,7 +44,8 @@
                         example, Web, Forensic, Crypto, Binary or something else. Team can gain some points for every
                         solved task. More points for more complicated tasks usually. Each task is vulnerable in some
                         way. Your goal is to exploit this vulnerability and in doing so you will find the "flag." For
-                        the challenges below, the flags are of the form CHC{...}. For example, a given flag could look like CHC{1_4m_4_fl46}.
+                        the challenges below, the flags are of the form CHC{...}. For example, a given flag could look
+                        like CHC{1_4m_4_fl46}.
                     </div>
                 </div>
             </div>
@@ -86,9 +87,10 @@
                     <h3>Crypto</h3>
                     <p>ie. echo "test" | nc chc.cs.cornell.edu 1339 | xxd</p>
                     <p>
-                        <a href="https://github.com/jcao219/ecb_ctf_challenge/blob/master/casino.c" class="btn btn-primary " role="button">Code</a>
+                        <a href="https://github.com/jcao219/ecb_ctf_challenge/blob/master/casino.c"
+                           class="btn btn-primary " role="button">Code</a>
                         <a href="http://cryptopals.com/sets/2/challenges/12" class="btn btn-default" role="button">Resources</a>
-                        </p>
+                    </p>
                 </div>
                 <div class="caption">
                     <form METHOD="POST" action="">
@@ -132,7 +134,8 @@
                     <h3>Reversing</h3>
                     <p>There's a dragon afoot, we need a hero.</p>
                     <p><a href="{% static "files/dragons" %}" class="btn btn-primary" role="button">Binary</a>
-                        <a href="https://en.wikibooks.org/wiki/X86_Disassembly/Disassemblers_and_Decompilers" class="btn btn-default" role="button">Resources</a></p>
+                        <a href="https://en.wikibooks.org/wiki/X86_Disassembly/Disassemblers_and_Decompilers"
+                           class="btn btn-default" role="button">Resources</a></p>
                 </div>
                 <div class="caption">
                     <form METHOD="POST" action="">
@@ -154,13 +157,20 @@
 
 {% include "js.html" %}
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-88373638-1', 'auto');
-  ga('send', 'pageview');
+    ga('create', 'UA-88373638-1', 'auto');
+    ga('send', 'pageview');
 
 </script>
 
