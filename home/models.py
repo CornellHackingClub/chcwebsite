@@ -8,6 +8,7 @@ class Home(models.Model):
     title = models.CharField(max_length=125)
     start = models.DateTimeField(blank=False)
     end = models.DateTimeField(blank=False)
+    location = models.CharField(max_length=125, default = 'Thurston 205')
     allday = models.BooleanField()
 
     def __unicode__(self):
