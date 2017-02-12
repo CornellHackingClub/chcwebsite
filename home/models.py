@@ -12,7 +12,6 @@ class Home(models.Model):
     allday = models.BooleanField()
 
     def __unicode__(self):
-        # This is the title of the lecture that will display in the admin page
         return self.title
 
 class Form(models.Model):
@@ -24,5 +23,4 @@ class Form(models.Model):
 
 
     def __unicode__(self):
-        # This is the title of the lecture that will display in the admin page
         return self.name
