@@ -3,7 +3,7 @@ from .models import Writeups
 
 
 def writeups_home(request):
-    queryset = Writeups.objects.all().order_by('-created_at')
+    queryset = Writeups.objects.all().order_by('-timestamp')
     context = {
         "ctfs": queryset,
     }
