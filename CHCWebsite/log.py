@@ -1,7 +1,10 @@
 try:
     from systemd.journal import JournalHandler
     class CHCLogHandler(JournalHandler):
-        pass
+        def emit(self, record):
+            if record.exc_info:
+                record.exc_info = ", ".join(record.exc_info)
+            super(CHCLogHandler, self).emit(record)
 except ImportError:
     from logging import NullHandler
     CHCLogHandler = NullHandler
