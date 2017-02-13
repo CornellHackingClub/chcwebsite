@@ -114,14 +114,14 @@ LOGGING = {
     'disable_existing_loggers': False,
     'handlers': {
         'journalctl': {
-            'level': 'DEBUG',
+            'level': 'ERROR',
             'class': 'CHCWebsite.log.CHCLogHandler',
         },
     },
     'loggers': {
         'django': {
             'handlers': ['journalctl'],
-            'level': 'DEBUG',
+            'level': 'ERROR',
             'propagate': True,
         },
     },
