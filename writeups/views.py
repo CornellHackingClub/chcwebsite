@@ -3,7 +3,7 @@ from .models import Writeups
 
 
 def writeups_home(request):
-    queryset = Writeups.objects.all().reverse()
+    queryset = Writeups.objects.all()
     context = {
         "ctfs": queryset,
     }
