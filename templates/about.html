@@ -37,7 +37,8 @@
                 Paul
                 Graham’s definition:</p>
             <blockquote>To programmers, “hacker” connotes mastery in the most literal sense: someone who can
-                make a computer do what he wants—whether the computer wants to or not.</blockquote>
+                make a computer do what he wants—whether the computer wants to or not.
+            </blockquote>
             <p>We have two subgroups: one with the purpose of educating the Cornell community on the importance of
                 cybersecurity and cyberethics, and one team that competes in and hosts hacking competitions (CTF).</p>
         </div>
@@ -46,125 +47,51 @@
 
     <!-- Team Members -->
     <div class="row">
+
         <div class="col-lg-12">
             <h2 class="page-header">Meet The Team</h2>
         </div>
-        <div class="col-md-4 text-center">
-            <div class="thumbnail">
-                <img class="img-responsive" src="{% static "img/evan.jpg" %}" alt="">
-                <div class="caption">
-                    <h3>Evan King<br>
-                        <small>President</small>
-                    </h3>
-                    <p>Computer Science Major, College of Engineering. Class of 2017.</p>
-                    <ul class="list-inline">
-                        <li><a href="https://www.facebook.com/evan.king.50"><i class="fa fa-2x fa-facebook-square"></i></a>
-                        </li>
-                        <li><a href="https://www.linkedin.com/in/evan-king-40072280"><i class="fa fa-2x fa-linkedin-square"></i></a>
-                        </li>
-                        <li><a href="https://github.com/esk79"><i class="fa fa-2x fa-github-square"></i></a>
-                        </li>
-                        <!-- considered using for resume download -->
-{#                        <li><a href="#"><i class="fa fa-2x fa-file-pdf-o"></i></a>#}
-{#                        </li>#}
-                    </ul>
+
+        {% for member in members %}
+            <div class="col-md-3 text-center">
+                <div class="thumbnail">
+                    <img class="img-responsive" src="{{ member.image.url }}" alt="">
+                    <div class="caption">
+                        <h3>{{ member.name }}<br>
+                            <small>{{ member.title }}</small>
+                        </h3>
+                        <ul class="list-inline">
+                            <li><a href="{{ member.facebook }}"><i
+                                    class="fa fa-2x fa-facebook-square"></i></a>
+                            </li>
+                            <li><a href="{{ member.linkedin }}"><i
+                                    class="fa fa-2x fa-linkedin-square"></i></a>
+                            </li>
+                            <li><a href="{{ member.github }}"><i class="fa fa-2x fa-github-square"></i></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-4 text-center">
-            <div class="thumbnail">
-                <img class="img-responsive" src="{% static "img/eyvind.jpg" %}" alt="">
-                <div class="caption">
-                    <h3>Eyvind Niklasson<br>
-                        <small>CTF Team Captain/Vice President</small>
-                    </h3>
-                    <p>Computer Science Major, College of Arts and Science. Class of 2017.</p>
-                    <ul class="list-inline">
-                        <li><a href="#"><i class="fa fa-2x fa-facebook-square"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-2x fa-linkedin-square"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-2x fa-github-square"></i></a>
-                        </li>
-                    </ul>
+        {% endfor %}
+
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Cornell Hacking Club 2016</p>
                 </div>
             </div>
-        </div>
-        <div class="col-md-4 text-center">
-            <div class="thumbnail">
-                <img class="img-responsive" src='{% static "img/sumner.jpg" %}' alt="">
-                <div class="caption">
-                    <h3>Sumner Hearth<br>
-                        <small>Treasurer/Vice President</small>
-                    </h3>
-                    <p>Physics - Computer Science double major, College of Arts and Science. Class of 2017</p>
-                    <ul class="list-inline">
-                        <li><a href="#"><i class="fa fa-2x fa-facebook-square"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-2x fa-linkedin-square"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-2x fa-github-square"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 text-center">
-            <div class="thumbnail">
-                <img class="img-responsive" src='{% static "img/jimmy.jpg" %}' alt="">
-                <div class="caption">
-                    <h3>Jimmy Cao<br>
-                        <small>Head of Cryptography</small>
-                    </h3>
-                    <p>Computer Science major, College of Engineering, Class of 2017</p>
-                    <ul class="list-inline">
-                        <li><a href="#"><i class="fa fa-2x fa-facebook-square"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-2x fa-linkedin-square"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-2x fa-github-square"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 text-center">
-            <div class="thumbnail">
-                <img class="img-responsive" src="{% static "img/athena.jpg" %}" alt="">
-                <div class="caption">
-                    <h3>Athena Cheung<br>
-                        <small>Team Member</small>
-                    </h3>
-                    <p>Computer Science Major, College of Engineering. Class of 2019.</p>
-                    <ul class="list-inline">
-                        <li><a href="#"><i class="fa fa-2x fa-facebook-square"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-2x fa-linkedin-square"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-2x fa-github-square"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        </footer>
+
     </div>
-    <!-- /.row -->
+    <!-- /.container -->
 
-    <hr>
-
-    <!-- Footer -->
-    <footer>
-        <div class="row">
-            <div class="col-lg-12">
-                <p>Copyright &copy; Cornell Hacking Club 2016</p>
-            </div>
-        </div>
-    </footer>
-
-</div>
-<!-- /.container -->
-
-{% include "js.html" %}
+    {% include "js.html" %}
 
 </body>
 

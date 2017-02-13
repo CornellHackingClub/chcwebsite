@@ -4,7 +4,7 @@ from django.shortcuts import render
 import json
 
 from CHCWebsite import settings
-from .models import Home, Form
+from .models import Home, Form, Member
 
 
 # Just using function based views for now because they're easy
@@ -14,6 +14,13 @@ def calendar(request):
         "events": queryset,
     }
     return render(request, "index.html", context)
+
+def about(request):
+    queryset = Member.objects.all()
+    context = {
+        "members": queryset,
+    }
+    return render(request, "about.html", context)
 
 
 def build_events_json():
