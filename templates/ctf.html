@@ -33,11 +33,11 @@
 
 
 			 {% for writeup in writeups %}
-			 <div class="row">
+			 <div id="{{ writeup.name_of_challenge | urlencode }}" class="row">
 				<div class="col-md-12">
 					<h3>{{ writeup.name_of_challenge }}</h3>
 					<p>Category: {{ writeup.category }}</p>
-					<div class="writeup-text" >{{ writeup.text | safe }}</p>
+					<div class="writeup-text" >{{ writeup.text | safe }}</p></div>
 				</div>
 			</div>
 			<hr>
