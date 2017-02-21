@@ -48,7 +48,7 @@
             <p>Placed <b>{{ ctf.place }}</b> out of <b>{{ ctf.out_of }}</b> | Competed on {{ ctf.date_competed }}</p>
             </p>
             <p>{{ ctf.description }}</p>
-            <a class="btn btn-primary" href="{% url "writeup" id=ctf.id %}">Read Writeup <i class="fa fa-angle-right"></i></a>
+            <a class="btn btn-primary" href="{% url "ctf" id=ctf.id %}">Read Writeups <i class="fa fa-angle-right"></i></a>
         </div>
     </div>
     <hr>

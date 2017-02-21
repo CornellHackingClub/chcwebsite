@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 
-from .views import writeups_home, writeups_detail
+from .views import ctfs_home, ctf_detail
 
 urlpatterns = [
-    url(r'^$', writeups_home,name='writeups'),
-    url(r'^(?P<id>\d+)/$', writeups_detail, name="writeup"),
+    url(r'^$', ctfs_home, name='writeups'),
+    url(r'^(?P<id>\d+)/$', ctf_detail, name="ctf"),
 ]

@@ -10,14 +10,14 @@
     <!-- Page Heading/Breadcrumbs -->
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">{{ writeup.name_of_CTF }}
+            <h1 class="page-header">{{ ctf.name_of_CTF }}
                 </small>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="{% url 'home' %}">Home</a>
                 </li>
                 <li><a href="{% url 'writeups' %}">Writeups</a></li>
-                <li class="active">{{ writeup.name_of_CTF }}</li>
+                <li class="active">{{ ctf.name_of_CTF }}</li>
             </ol>
         </div>
     </div>
@@ -30,7 +30,18 @@
         <div class="col-lg-12">
 
             <!-- Writeup Content -->
-            {{ writeup.writeup | safe }}
+
+
+			 {% for writeup in writeups %}
+			 <div id="{{ writeup.name_of_challenge | urlencode }}" class="row">
+				<div class="col-md-12">
+					<h3>{{ writeup.name_of_challenge }}</h3>
+					<p>Category: {{ writeup.category }}</p>
+					<div class="writeup-text" >{{ writeup.text | safe }}</p></div>
+				</div>
+			</div>
+			<hr>
+			{% endfor %}
 
             <!-- Footer -->
             <footer>
