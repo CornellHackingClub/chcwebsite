@@ -1,18 +1,21 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Writeups
+from .models import CTF
 
 
-def writeups_home(request):
-    queryset = Writeups.objects.all().order_by('-timestamp')
+def ctfs_home(request):
+    queryset = CTF.objects.all().order_by('-timestamp')
     context = {
         "ctfs": queryset,
     }
-    return render(request, "writeups-main.html", context)
+    return render(request, "ctfs-main.html", context)
 
 
-def writeups_detail(request, id):
-    instance = get_object_or_404(Writeups, id=id)
+def ctf_detail(request, id):
+    ctf = get_object_or_404(CTF, id=id)
+    queryset = ctf.writeup_set.all()
+
     context = {
-        "writeup": instance,
+        "writeups": queryset,
+        "ctf": ctf
     }
-    return render(request, "writeup.html", context)
+    return render(request, "ctf.html", context)
