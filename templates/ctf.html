@@ -34,10 +34,11 @@
 
 			 {% for writeup in writeups %}
 			 <div id="{{ writeup.name_of_challenge | urlencode }}" class="row">
-				<div class="col-md-12">
-					<h3>{{ writeup.name_of_challenge }}</h3>
+				<div class="col-lg-12">
+					<h2>{{ writeup.name_of_challenge }}</h2>
 					<p>Category: {{ writeup.category }}</p>
-					<div class="writeup-text" >{{ writeup.text | safe }}</p></div>
+					<p><i class="fa fa-clock-o"></i> Posted on {{ writeup.timestamp | date:"F d, Y" }} </p>
+					<div class="col-lg-12" >{{ writeup.text | safe }}</div>
 				</div>
 			</div>
 			<hr>
