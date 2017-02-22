@@ -38,7 +38,7 @@
 					<h2>{{ writeup.name_of_challenge }}</h2>
 					<p>Category: {{ writeup.category }}</p>
 					<p><i class="fa fa-clock-o"></i> Posted on {{ writeup.timestamp | date:"F d, Y" }} </p>
-					<div class="col-lg-12" >{{ writeup.text | safe }}</div>
+					{{ writeup.text | safe }}
 				</div>
 			</div>
 			<hr>
