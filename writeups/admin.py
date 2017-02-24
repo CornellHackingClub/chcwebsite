@@ -18,7 +18,7 @@ class WriteupModelAdmin(admin.ModelAdmin):
     list_filter = ["ctf", "category"]
     search_fields = ["name_of_challenge", "ctf"]
     class Meta:
-        model = CTF
+        model = Writeup
 
 
 admin.site.register(Writeup, WriteupModelAdmin)
