@@ -47,5 +47,5 @@ fabric.properties
 # Python
 *.pyc
 
-#Ignore files automatically made by MacOS
-*.DS_Store
+#MacOS Junk
+**.DS_Store
