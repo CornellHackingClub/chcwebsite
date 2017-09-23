@@ -20,7 +20,6 @@
                 <li class="active">Challenges</li>
             </ol>
         </div>
-        {#        Coming Soon#}
     </div>
     <!-- /.row -->
 
@@ -29,10 +28,7 @@
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
                 <h1 class="display-3">Want to join our CTF team?</h1>
-                <p class="lead">The challenges for fall 2017 have not been posted yet; the challenges
-                    from last semester are up for educational purposes. You can find the solutions on
-                    our <a href="{% url 'writeups' %}4/">write-ups page</a>. We will post on our
-                    facebook page with information once the challenges have been posted.</p>
+                <p class="lead">Recruitment has finally opened! Solve any challenge to immediately qualify for an interview. <br> You can find the solutions to past challenges on our <a href="{% url 'writeups' %}4/">write-ups page</a>.</p>
                 <p>
                     <a class="btn btn-primary" data-toggle="collapse" href="#moreinfo" aria-expanded="false"
                        aria-controls="moreinfo">
@@ -61,14 +57,15 @@
             </div>
         {% endif %}
 
-        <div class="col-xs-6 col-sm-3">
+        <div class="col-xs-6 col-sm-4">
             <div class="thumbnail">
                 <div class="caption">
                     <h3>Web</h3>
-                    <p>Username: CHC </br>Password: OverErryThing</p>
-                    <p><a href="/challenge/web/" class="btn btn-primary" role="button">Website</a>
-                        <a href="{% static "files/login.pyc.zip" %}" class="btn btn-default" role="button">Server
-                            Binary</a></p>
+                    <p>Apparently a CHC interview costs $100k. <br> Maybe you can get it cheaper?</p>
+                    <p>
+                        <a href="http://165.227.181.157" class="btn btn-primary" role="button">Website</a>
+                        <a href="http://www.cgisecurity.com/owasp/html/ch11.html" class="btn btn-default" role="button">Resources</a>
+                    </p>
                 </div>
                 <div class="caption">
                     <form METHOD="POST" action="">
@@ -83,15 +80,15 @@
                 </div>
             </div>
         </div>
-        <div class="col-xs-6 col-sm-3">
+        <div class="col-xs-6 col-sm-4">
             <div class="thumbnail">
                 <div class="caption">
                     <h3>Crypto</h3>
-                    <p>ie. echo "test" | nc chc.cs.cornell.edu 1339 | xxd</p>
+                    <p>chc.cs.cornell.edu:1347</p>
                     <p>
-                        <a href="https://github.com/jcao219/ecb_ctf_challenge/blob/master/casino.c"
-                           class="btn btn-primary " role="button">Code</a>
-                        <a href="http://cryptopals.com/sets/2/challenges/12" class="btn btn-default" role="button">Resources</a>
+                        <a href="https://gist.github.com/tjade273/873ee1ec2d7896405e5d3c616dc1ea13"
+                           class="btn btn-primary " role="button">Start Here!</a>
+                        <a href="https://gist.github.com/tjade273/36455f4955307db2b680c4f1ac35e710#file-rsa-c" class="btn btn-default" role="button">Code</a>
                     </p>
                 </div>
                 <div class="caption">
@@ -107,12 +104,12 @@
                 </div>
             </div>
         </div>
-        <div class="col-xs-6 col-sm-3">
+        <div class="col-xs-6 col-sm-4">
             <div class="thumbnail">
                 <div class="caption">
                     <h3>Forensics</h3>
-                    <p>I know these guys are up to something. Just not sure what.</p>
-                    <p><a href="{% static "files/final_hacker_traffic.pcap.zip" %}" class="btn btn-primary"
+                    <p>I got the strangest phone call. <br> Any idea what they're saying?</p>
+                    <p><a href="{% static "files/CHC-forensics-challenge.pcap" %}" class="btn btn-primary"
                           role="button">Download</a>
                         <a href="http://serverfault.com/questions/38626/how-can-i-read-pcap-files-in-a-friendly-format/38632"
                            class="btn btn-default" role="button">Resources</a></p>
@@ -130,14 +127,16 @@
                 </div>
             </div>
         </div>
-        <div class="col-xs-6 col-sm-3">
+        <div class="col-xs-6 col-sm-4">
             <div class="thumbnail">
                 <div class="caption">
                     <h3>Reversing</h3>
-                    <p>There's a dragon afoot, we need a hero.</p>
-                    <p><a href="{% static "files/dragons" %}" class="btn btn-primary" role="button">Binary</a>
+                    <p>nc chc.cs.cornell.edu 1345</p>
+                    <p>
+                        <a href="{% static "files/stackbug" %}" class="btn btn-primary" role="button">Binary</a>
                         <a href="https://en.wikibooks.org/wiki/X86_Disassembly/Disassemblers_and_Decompilers"
-                           class="btn btn-default" role="button">Resources</a></p>
+                           class="btn btn-default" role="button">Resources</a>
+                       </p>
                 </div>
                 <div class="caption">
                     <form METHOD="POST" action="">
@@ -152,6 +151,30 @@
                 </div>
             </div>
         </div>
+         <div class="col-xs-6 col-sm-4">
+        <div class="thumbnail">
+            <div class="caption">
+                <h3>Recon</h3>
+                <p>I left my key lying around somewhere. <br>Can you git it for me?</p>
+                <p>
+                    <a href="/tools" class="btn btn-primary" role="button">Resources</a>
+                   </p>
+            </div>
+            <div class="caption">
+                <form METHOD="POST" action="">
+                    {% csrf_token %}
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Flag" name="reverse_flag">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit">Submit</button>
+                      </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+   
     </div>
 
 </div>
