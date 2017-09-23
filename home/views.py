@@ -110,7 +110,7 @@ def completed_challenge(request, name, netid, year):
     forensic = request.COOKIES.get('forensic_flag', None)
     reverse = request.COOKIES.get('reverse_flag', None)
     osint = request.COOKIES.get('osint_flag', None)
-    challenge = check_flag(web, crypto, forensic, reverse)
+    challenge = check_flag(web, crypto, forensic, reverse, osint)
 
     error = None
     thanks = None
