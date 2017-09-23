@@ -47,6 +47,7 @@ def challenges(request):
     crypto_flag = request.POST.get("crypto_flag")
     forensic_flag = request.POST.get("forensic_flag")
     reverse_flag = request.POST.get("reverse_flag")
+    osint_flag = request.POST.get("osint_flag")
 
     name = request.POST.get("name")
     netid = request.POST.get("netid")
@@ -90,6 +91,14 @@ def challenges(request):
         else:
             error = error_text
 
+    if osint_flag:
+        if osint_flag == os.getenv('OSINT_FLAG', 0):
+            response = render(request, "completion_form.html")
+            response.set_cookie('osint_flag', osint_flag)
+            return response
+        else:
+            error = error_text
+
     context = {
         "error": error,
     }
@@ -100,6 +109,7 @@ def completed_challenge(request, name, netid, year):
     crypto = request.COOKIES.get('crypto_flag', None)
     forensic = request.COOKIES.get('forensic_flag', None)
     reverse = request.COOKIES.get('reverse_flag', None)
+    osint = request.COOKIES.get('osint_flag', None)
     challenge = check_flag(web, crypto, forensic, reverse)
 
     error = None
@@ -117,7 +127,7 @@ def completed_challenge(request, name, netid, year):
     return render(request, "completion_form.html", context)
 
 
-def check_flag(web_flag, crypto_flag, forensic_flag, reverse_flag):
+def check_flag(web_flag, crypto_flag, forensic_flag, reverse_flag, osint_flag):
     completed = ""
     if web_flag:
         if web_flag == os.getenv('WEB_FLAG', 0):
@@ -134,6 +144,10 @@ def check_flag(web_flag, crypto_flag, forensic_flag, reverse_flag):
     if reverse_flag:
         if reverse_flag == os.getenv('REVERSE_FLAG', 0):
             completed += "reversing "
+
+    if osint_flag:
+        if osint_flag == os.getenv('OSINT_FLAG', 0):
+            completed += "recon "
 
     if completed == "":
         completed = None
