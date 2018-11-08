@@ -49,3 +49,6 @@ fabric.properties
 
 #MacOS Junk
 **.DS_Store
+
+# Database
+*.sqlite3
